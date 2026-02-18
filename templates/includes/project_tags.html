@@ -1,0 +1,30 @@
+<section class="container projectss py-5 section  mt-4" id="projects">
+    <div class="text-center">
+        <span class="d-inline-block rounded font-weight-bold activity-info my-2">پروژه های خلاقانه</span>
+        <h1 class="activity-name"> آخرین کارهای ما</h1>
+        <p class="activity-text">موارد زیر نمونه کوچکی از فعالیت های ما در حوزه طراحی و ساخت اپلیکیشن و وبسایت است.</p>
+    </div>
+    <div class="animation-project d-none d-md-inline-block"></div>
+    <div class="row gallery">
+
+        {% for project in projects %}
+            <!-- single project -->
+            <div class="col-12 col-md-6 col-lg-4 py-4 d-flex align-items-center justify-content-center gallery-img">
+                <div style="width: 400px; height: 170px;" class="img-pro">
+                    <div class="addition">
+                        <img src="{{ project.image.url }}" alt="" class="img-fluid pro-photo ">
+                        <i class="fas fa-search pro-link"></i>
+                    </div>
+                    <div class="py-2 pro-name-activity w-100 text-center">
+                        <a href="{{ project.address }}"
+                           class="pro-name font-weight-bold text-center">{{ project.title }}</a>
+                        <p class="pro-activity">{{ project.description }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end single project -->
+        {% endfor %}
+
+
+    </div>
+</section>
