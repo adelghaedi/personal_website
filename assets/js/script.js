@@ -7,8 +7,8 @@ jQuery(document).ready(function () {
     jQuery('[data-toggle="tooltip"]').tooltip();
 });
 
-//   change head word 
-const text = ['گروه برنامه نویسی فراکد', 'متشکل از کادری مجرب ', 'توسعه دهنده وب سایت و اپ موبایل'];
+//   change head word
+const text = ['برنامه نویس بک اند','برنامه نویس پایتون'];
 
 let count = 0;
 let index = 0;
@@ -24,7 +24,7 @@ let letter = "";
     currentText = text[count];
     letter = currentText.slice(0, ++index);
 
-    document.querySelector('.head-name-faracode').textContent = letter;
+    document.querySelector('.head-name-resume').textContent = letter;
     if (letter.length === currentText.length) {
         count++;
         index = 0;

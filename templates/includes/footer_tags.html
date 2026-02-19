@@ -3,12 +3,12 @@
 <div class="container">
     <div class="row d-flex align-items-center">
         <div class="col-12 col-md-4 d-flex">
-            <a href="#" class="font-weight-bold footer-brand">
-                <img src="{% static 'img/logo%20(2).png' %}" alt="logo">فراکد
+            <a href="https://github.com/adelghaedi" class="font-weight-bold footer-brand">
+                <img src="{% static 'img/resume.png' %}" alt="logo">عادل قائدی
             </a>
         </div>
         <div class="col-12 col-md-4 my-4 my-md-0">
-            <p class="footer-text">مارا در شبکه های اجتماعی دنبال کنید</p>
+            <p class="footer-text">من را در شبکه های اجتماعی دنبال کنید</p>
             <div class="footer-icons">
                 {% for social in socials %}
                     <a href="{{ social.address }}"><em class="{{ social.icon_class }}"
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="col-12 col-md-4">
-            <h3 class="footer-title">تماس با ما</h3>
+            <h3 class="footer-title">تماس با من</h3>
             <p class="footer-text">{{ contact.address }}</p>
             <p class="footer-text">{{ contact.city }}</p>
             <p class="footer-text">{{ contact.phone }}</p>

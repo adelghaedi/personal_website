@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from project_app.models import Project
 from contactus_app.models import Contact, Message
+from skill_app.models import Skill
 
 
 def home(request):
@@ -12,8 +13,12 @@ def home(request):
 
         Message.objects.create(name=name, email=email, subject=subject, body=body)
 
-
     projects = Project.objects.all()
     contact = Contact.objects.all().last()
     socials = contact.socials.all()
-    return render(request, "home.html", context={"projects": projects, "contact": contact, "socials": socials})
+    skills = Skill.objects.all()
+    return render(
+        request,
+        "home.html",
+        context={"projects": projects, "contact": contact, "socials": socials,"skills": skills },
+    )
