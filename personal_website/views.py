@@ -16,9 +16,10 @@ def home(request):
     projects = Project.objects.all()
     contact = Contact.objects.all().last()
     socials = contact.socials.all()
-    skills = Skill.objects.all()
+    # skills = Skill.objects.all()
+    skills = []
     return render(
         request,
         "home.html",
-        context={"projects": projects, "contact": contact, "socials": socials,"skills": skills },
+        context={"projects": projects, "contact": contact, "socials": socials, "skills": skills},
     )
