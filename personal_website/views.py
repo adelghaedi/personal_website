@@ -15,9 +15,9 @@ def home(request):
 
     projects = Project.objects.all()
     contact = Contact.objects.all().last()
-    socials = contact.socials.all()
-    # skills = Skill.objects.all()
-    skills = []
+    # socials = contact.socials.all()
+    socials = []
+    skills = Skill.objects.all()
     return render(
         request,
         "home.html",
